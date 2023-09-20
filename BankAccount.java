@@ -16,13 +16,12 @@ public class BankAccount {
                 //JOptionPane.showMessageDialog(null,"Your new balance is: "+ currentBalance + "PHP");
             }else if( options == 3){
                 int withdraw = Integer.parseInt(JOptionPane.showInputDialog("Enter the amount to withdraw: "));
-                //initialBalance-=withdraw;
 
                 if (withdraw > currentBalance) {
                     JOptionPane.showMessageDialog(null, "Sorry, you cannot withdraw this amount.");
                 }else{
-                    currentBalance = initialBalance - withdraw;
-                    JOptionPane.showMessageDialog(null,"Sorry, you cannot withdraw this amount.");
+                    initialBalance -= withdraw;
+                    JOptionPane.showMessageDialog(null,"Withdraw successful!");
                     }
 
             }else if(options == 4) {
